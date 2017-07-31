@@ -269,13 +269,6 @@ def prepare_url(url):
         path = '/'.join(path)
     url_p = url_p._replace(path=path)
 
-    # add pageSize=96 query so it forces more results
-    query = url_p.query
-    query = query.split('&')
-    query.append('pageSize=96')
-    query = '&'.join(query)
-    url_p = url_p._replace(query=query)
-
     return url_p.geturl()
 
 if __name__ == '__main__':
